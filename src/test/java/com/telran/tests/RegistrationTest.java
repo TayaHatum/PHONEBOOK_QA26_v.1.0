@@ -11,7 +11,7 @@ public class RegistrationTest extends TestBase {
     public void registrationTest(){
 
         app.getUser().openLogRegForm();
-        int i = (int) ((System.currentTimeMillis()/1000)/3600);
+        int i = (int) ((System.currentTimeMillis()/1000)%3600);
         String email= "Mon"+i+"@mail.com";
         String password="Mon12$"+i;
         System.out.println(email + " " + password);
