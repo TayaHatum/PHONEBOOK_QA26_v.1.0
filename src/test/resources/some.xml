@@ -5,7 +5,7 @@
     <test name="Reg">
 
         <classes>
-            <class name="com.telran.tests.RegistrationTest"/>
+            <class name="com.telran.tests.AddContactTest"/>
 
         </classes>
     </test>

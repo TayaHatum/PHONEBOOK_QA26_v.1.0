@@ -19,13 +19,18 @@ dependencies {
 test {
     useTestNG()
 }
+
 task reg(type: Test){
 
-    useTestNG{
-        suites 'src/test/resources/testng.xml'
-    }
+    useTestNG {
+        def suite = System.getProperty('suite', '')
+        if (suite.equals('some')) {
+            suites 'src/test/resources/some.xml'
+        } else   {
+            suites 'src/test/resources/testng.xml'
+        }
 
-    if(project.hasProperty('browser')){
-        systemProperty 'browser', "${browser}"
-    }
-}
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser', "${browser}"
+        }
+    }}
