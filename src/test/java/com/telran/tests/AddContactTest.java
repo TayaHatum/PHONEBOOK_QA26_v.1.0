@@ -35,6 +35,7 @@ public class AddContactTest extends TestBase {
         String address = "Tel Aviv"+i;
         String desc = "My new contact";
 
+
         app.getContact().clickAddButton();
         app.getContact().pause(2000);
         app.getContact().fillContactForm(new Contact().withName(name).withLastName(lastName)
