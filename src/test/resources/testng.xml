@@ -10,9 +10,9 @@
         </groups>
 
         <classes>
-            <class name="com.telran.tests.RegistrationTest"/>
+
             <class name="com.telran.tests.LoginTest"/>
-            <class name="com.telran.tests.AddContactTest"/>
+
 
         </classes>
     </test>
