@@ -8,24 +8,19 @@ import org.testng.annotations.Test;
 
 public class AddContactTest extends TestBase {
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void ensurePrecondition() {
         if (!app.getUser().isLogined()) {
             app.getUser().login();
         }
     }
 
-    @Test
-    public void useLomBokStyle(){
-        LomBokStyle style =LomBokStyle.builder().name("Lom").lname("Bok").build();
-    }
-    
+
+
 
     @Test (groups = {"rest"})
-    public void addContactTestRest() throws InterruptedException {
+    public void addContactTestRest() {
         app.getContact().clickContactButton();
-
-        app.getContact().pause(1000);
         int contactSize = app.getContact().getContactSize();
         if(contactSize >= 2){
             app.getContact().clearContacts();
@@ -37,30 +32,23 @@ public class AddContactTest extends TestBase {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         String name = "Lola" + i;
         String lastName = "Doe" + i;
-        String email = "lola" + i + "@maul.com";
+        String email = "lola" + i + "@mail.com";
         String phone = "9778111" + i;
         String address = "Tel Aviv"+i;
         String desc = "My new contact";
 
 
         app.getContact().clickAddButton();
-        app.getContact().pause(2000);
         app.getContact().fillContactForm(new Contact().withName(name).withLastName(lastName)
          .withEmail(email).withPhone(phone).withAddress(address).withDescription(desc));
-
-
-
         app.getContact().clickSaveBatton();
-        app.getContact().pause(2000);
         Assert.assertTrue(app.getContact().isNameExist(name));
 
     }
 
-    @Test (groups = {"web"})
+    @Test (groups = {"web","rest"},priority = 1)
     public void addContactTestWeb() throws InterruptedException {
         app.getContact().clickContactButton();
-
-        app.getContact().pause(1000);
         int contactSize = app.getContact().getContactSize();
         if(contactSize >= 2){
 
@@ -72,22 +60,23 @@ public class AddContactTest extends TestBase {
         int i = (int) (System.currentTimeMillis() / 1000) % 3600;
         String name = "Lola" + i;
         String lastName = "Doe" + i;
-        String email = "lola" + i + "@maul.com";
+        String email = "lola" + i + "@mail.com";
         String phone = "9778111" + i;
         String address = "Tel Aviv"+i;
         String desc = "My new contact";
 
 
         app.getContact().clickAddButton();
-        app.getContact().pause(2000);
         app.getContact().fillContactForm(new Contact().withName(name).withLastName(lastName)
                 .withEmail(email).withPhone(phone).withAddress(address).withDescription(desc));
-
-
-
         app.getContact().clickSaveBatton();
-        app.getContact().pause(2000);
+
         Assert.assertTrue(app.getContact().isNameExist(name));
 
+    }
+
+    public void useLomBokStyle(){
+
+        //LomBokStyle style =LomBokStyle.builder().name("Lom").lname("Bok").build();
     }
 }
