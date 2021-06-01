@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-WebDriver wd = new ChromeDriver();
+
     ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
 
     @BeforeMethod(alwaysRun = true)

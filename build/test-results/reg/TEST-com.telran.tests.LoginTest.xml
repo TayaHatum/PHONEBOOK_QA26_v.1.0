@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telran.tests.LoginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-01T09:18:19" hostname="MBP-Taya.lan" time="1.509">
+  <properties/>
+  <testcase name="loginTest" classname="com.telran.tests.LoginTest" time="1.509"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 30782
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1622539094.936][WARNING]: This version of ChromeDriver has not been tested with Chrome version 90.
+Jun 01, 2021 12:18:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

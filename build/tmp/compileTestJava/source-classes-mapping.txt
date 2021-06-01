@@ -6,11 +6,6 @@ com/telran/application/HelperBase.java
  com.telran.application.HelperBase
 com/telran/application/ContactHelper.java
  com.telran.application.ContactHelper
-com/telran/model/LomBokStyle.java
- com.telran.model.LomBokStyle
- com.telran.model.LomBokStyle$LomBokStyleBuilder
-com/telran/model/User.java
- com.telran.model.User
 com/telran/tests/LoginTest.java
  com.telran.tests.LoginTest
 com/telran/tests/RegistrationTest.java
@@ -21,3 +16,8 @@ com/telran/application/ApplicationManager.java
  com.telran.application.ApplicationManager
 com/telran/tests/TestBase.java
  com.telran.tests.TestBase
+com/telran/model/User.java
+ com.telran.model.User
+com/telran/model/LomBokStyle.java
+ com.telran.model.LomBokStyle
+ com.telran.model.LomBokStyle$LomBokStyleBuilder
